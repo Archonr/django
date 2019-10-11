@@ -1,0 +1,28 @@
+div{
+    'border-radius: 3px;
+    'border: 2px solid;
+}
+
+.float-right {
+    float: right;
+}
+
+.full-width{
+    width: 100%;
+    margin-bottom: .3em;
+}
+
+.no-pad-left{
+    padding-left: 0;
+}
+.no-pad-right{
+    padding-right: 0;
+}
+
+.alert{
+    width:90%;
+    margin-bottom: 0;
+    float:left;
+    padding: 0.5em;
+    height:34px;
+}

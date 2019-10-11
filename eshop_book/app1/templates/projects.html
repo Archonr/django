@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Deployment center{% endblock %}
+
+
+
+{% block navbar %}
+<p><a href="{% url 'logout' %}">logout</a></p>
+<ul class="nav navbar-nav">
+
+    <li class="dropdown">
+
+        {%  if projects %}
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            {% for p in projects %}
+            <li><a href="/projects/{{p.id}}">{{ p.name }}</a></li>
+            {% endfor %}
+
+        </ul>
+        {% endif %}
+    </li>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="error"></div>
+        </div>
+        Edit {{ project_name }}
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+                <div class="container">
+
+                    <div class="col-lg-9" style="float:left">
+                        <textarea rows="4" cols="50">
+                            {{ file_content }}
+</textarea>
+
+                    </div>
+                </div>
+            </div>
+            <div class="projects-tree"></div>
+        </div>
+    </div>
+</div>
+
+    <form action=""
+
+{% endblock %}
+
